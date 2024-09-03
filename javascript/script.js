@@ -2,7 +2,7 @@
 
 // Fetching weather data from WeatherAPI
 let apiKey = "fd34aebfb11048f1bfa61134241808";
-let apiUrl = `http://api.weatherapi.com/v1/current.json?&aqi=yes&q=`;
+let apiUrl = `https://api.weatherapi.com/v1/current.json?&aqi=yes&q=`;
 
 async function checkWeather(city) {
     try {
