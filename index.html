@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App | Scripting With Saad</title>
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./assets/images/favicon.png" type="image/x-icon">
+
+    <!-- linking Remix Icon Cdn  -->
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+
+    <!-- linking css file -->
+    <link rel="stylesheet" href="./stylesheet/style.css">
+</head>
+
+<body>
+
+
+    <div class="main">
+        <div class="card">
+            <div class="search">
+                <input type="text" placeholder="Enter your City Name">
+                <button><i class="ri-search-2-line"></i></button>
+            </div>
+
+            <div class="error">
+                <p>invalid City Name</p>
+            </div>
+
+            <div class="weather">
+
+
+                <div class="weather-icon">
+                    <img src="./assets/images/rain.png">
+                </div>
+
+                <h1 class="temp">22°C</h1>
+                <h2 class="city">New York</h2>
+
+
+                <div class="details">
+                    <div class="col">
+                        <img src="./assets/images/humidity.png">
+                        <div>
+                            <p class="humidity">50%</p>
+                            <h2>Humidity</h2>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <img src="./assets/images/wind.png">
+                        <div>
+                            <p class="wind">15 Km / h</p>
+                            <h3>Wind Speed</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <script src="./javascript/script.js"></script>
+</body>
+
+</html>
