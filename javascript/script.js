@@ -8,14 +8,11 @@ async function checkWeather(city) {
     try {
         const response = await fetch(apiUrl + city + `&key=${apiKey}`);
 
-
         if (response.status == 404) {
-            document.querySelector('.error').style.display = "none";
+            document.querySelector('.error').style.display = "block";
             document.querySelector('.weather').style.display = "none";
         } else {
             var data = await response.json();
-            // console.log(data);
-
 
             document.querySelector(".temp").innerHTML = data.current.temp_c + "°C";
             document.querySelector(".city").innerHTML = data.location.name;
@@ -24,17 +21,12 @@ async function checkWeather(city) {
 
             document.querySelector(".weather").style.display = "block";
             document.querySelector(".error").style.display = "none";
-
         }
-    }
-    catch (error) {
+    } catch (error) {
         console.error("Error fetching weather data:", error);
         document.querySelector(".error").style.display = "block";
     }
-
 }
-
-
 
 document.addEventListener("DOMContentLoaded", () => {
     const searchBox = document.querySelector(".search input");
@@ -44,5 +36,3 @@ document.addEventListener("DOMContentLoaded", () => {
         checkWeather(searchBox.value);
     });
 });
-
-
